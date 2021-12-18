@@ -21,4 +21,12 @@ export class ProductService {
     const url = PRODUCTS_API_URL;
     return this.http.get<Product[]>(url);
   }
+
+  getProductById(id: number): Observable<Product> {
+    // Get data of a single product looking up by id
+    // form the backend API endpoint product/:id
+    // returns a single Product
+    const url = PRODUCTS_API_URL + `/${id}`;
+    return this.http.get<Product>(url);
+  }
 }

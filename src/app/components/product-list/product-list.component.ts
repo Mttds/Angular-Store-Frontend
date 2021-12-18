@@ -14,8 +14,15 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(res => {
+      for(let i = 0; i < res.length; i++) {
+        const product = res[i];
+        //console.log(product);
+        if(product.url == "" || product.url == null) {
+          product.url = "./assets/image-not-found.png"
+        }
+      }
       this.product_list = res;
-      console.log(this.product_list);
+      //console.log(this.product_list);
     })
   }
 

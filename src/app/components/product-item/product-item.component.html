@@ -1,9 +1,21 @@
 <div style="margin-bottom: 40px">
-    <h3>{{ product.name }}</h3>
-    <p>{{ product.url }}</p>
-    <p>{{ product.price }}</p>
-    <button class="btn btn-primary" style="margin-right: 10px;">Upvote</button>
-    <button class="btn btn-primary" style="margin-right: 10px;">Downvote</button>
-    <button class="btn btn-primary" style="margin-right: 10px;">Hide</button>
-    <br/>
+    <a routerLink="/product/{{ product.id }}">
+        <img class="product-image" src="{{ product.url }}"/>
+    </a>
+    <p>{{ product.name }}</p>
+    <p>${{ product.price }}</p>
+    <select name="qty">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <p></p>
+    <button class="btn btn-primary" style="margin-right: 10px;">Add to cart</button>
 </div>
