@@ -1,26 +1,30 @@
 <div class="detail-container">
-    <div id="product-detail-view">
-        <img class="img" src="{{ product.url }}">
-    </div>
-    <div class="detail-item">
-        <h3>{{ product.name }}</h3>
-        <p>${{ product.price }}</p>
-        <p>{{ product.description }}</p>
-        <select name="qty">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <p></p>
-        <button class="btn btn-primary" style="margin-right: 10px;">Add to cart</button>
-        <p></p>
-        <a class="back-link" routerLink="/">Back to Products</a>
-    </div>
+  <div id="product-detail-view">
+    <img class="img" src="{{ product.url }}">
+  </div>
+  <div class="detail-item">
+    <h3>{{ product.name }}</h3>
+    <p>${{ product.price }}</p>
+    <p>{{ product.description }}</p>
+    <select name="qty">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <p></p>
+    <button 
+      class="btn btn-primary"
+      style="margin-right: 10px;"
+      (click)="addToCart()">
+      Add to cart</button>
+    <p></p>
+    <a class="back-link" routerLink="/">&#8592; Back to Products</a>
+  </div>
 </div>

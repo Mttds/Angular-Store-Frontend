@@ -1,1 +1,9 @@
-<h1>Cart</h1>
+<div *ngIf="cartItems.length === 0" class="empty-cart-message">No items in the cart.</div>
+
+<div class="cart-container" *ngIf="cartItems.length > 0">
+  <div>
+      <app-cart-item *ngFor="let cartItem of cartItems" [cartItem]="cartItem" (removeItem)="removeItem($event)"></app-cart-item>
+      <p></p>
+      <p><b>Total: ${{ totalAmount }}</b></p>
+  </div>
+</div>

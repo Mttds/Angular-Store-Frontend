@@ -1,0 +1,7 @@
+<div>
+  <span>Quantity {{ cartItem.quantity }}</span> of 
+  <span>{{ cartItem.name }}</span>:
+  <b>${{ (cartItem.price * cartItem.quantity) }}</b>
+  <p></p>
+  <button class="btn btn-primary" style="margin-right: 10px;" (click)="remove(cartItem)">Remove</button>
+</div>

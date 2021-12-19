@@ -1,10 +1,12 @@
 <div style="margin-bottom: 40px">
-    <a routerLink="/product/{{ product.id }}">
-        <img class="product-image" src="{{ product.url }}"/>
-    </a>
-    <p>{{ product.name }}</p>
-    <p>${{ product.price }}</p>
-    <select name="qty">
+  <a routerLink="/product/{{ product.id }}">
+    <img class="product-image" src="{{ product.url }}"/>
+  </a>
+  <p>{{ product.name }}</p>
+  <p>${{ product.price }}</p>
+  <form #form="ngForm">
+    <input type="number" name="qty" min="0" max="10" placeholder="0"/>
+    <!--<select [(ngModel)]="quantity" name="qty">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -15,7 +17,12 @@
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
-    </select>
+    </select>-->
     <p></p>
-    <button class="btn btn-primary" style="margin-right: 10px;">Add to cart</button>
+    <button 
+      class="btn btn-primary"
+      [disabled]="form.invalid"
+      style="margin-right: 10px;"
+      (click)="addToCart()">Add to cart</button>
+  </form>
 </div>

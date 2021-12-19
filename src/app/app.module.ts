@@ -5,6 +5,7 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 import { ProductItemDetailComponent } from './components/product-item-detail/product-item-detail.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CartComponent } from './components/cart/cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     ProductItemComponent,
     NavBarComponent,
     CartComponent,
+    CartItemComponent,
     ProductItemDetailComponent
   ],
   imports: [
