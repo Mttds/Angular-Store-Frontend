@@ -6,7 +6,7 @@
     <h3>{{ product.name }}</h3>
     <p>${{ product.price }}</p>
     <p>{{ product.description }}</p>
-    <select name="qty">
+    <select [(ngModel)]="quantity" name="qty">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>

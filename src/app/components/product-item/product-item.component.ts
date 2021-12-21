@@ -9,6 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ProductItemComponent implements OnInit {
   @Input() product: Product; // Passing Data From Parent to Child with a decorator: @Input
+  quantity: number = 0;
 
   constructor(private cartService: CartService) {
     // initialize product class variable
@@ -27,6 +28,8 @@ export class ProductItemComponent implements OnInit {
   }
 
   addToCart() {
-    this.cartService.addProduct(this.product);
+    if(this.cartService.addProduct(this.product, this.quantity)) {
+      window.alert(`Product ${this.product.name} has been added to the cart!`);
+    }
   }
 }

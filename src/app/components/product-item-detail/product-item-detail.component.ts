@@ -12,6 +12,7 @@ import { ProductService } from '../../services/product.service';
 export class ProductItemDetailComponent implements OnInit {
   product: Product = new Product();
   id: number = 0;
+  quantity: number = 0;
 
   constructor(
     private productService: ProductService,
@@ -32,7 +33,8 @@ export class ProductItemDetailComponent implements OnInit {
   }
 
   addToCart() {
-    this.cartService.addProduct(this.product);
+    if(this.cartService.addProduct(this.product, this.quantity)) {
+      window.alert(`Product ${this.product.name} has been added to the cart!`);
+    }
   }
-
 }

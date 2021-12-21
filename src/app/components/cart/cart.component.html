@@ -5,5 +5,7 @@
       <app-cart-item *ngFor="let cartItem of cartItems" [cartItem]="cartItem" (removeItem)="removeItem($event)"></app-cart-item>
       <p></p>
       <p><b>Total: ${{ totalAmount }}</b></p>
+      <p></p>
+      <button class="btn btn-primary" style="margin-right: 10px;" (click)="emptyCart()">Empty Cart</button>
   </div>
 </div>
