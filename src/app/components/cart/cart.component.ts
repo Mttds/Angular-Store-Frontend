@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductToAdd } from 'src/app/models/ProductToAdd';
 import { CartService } from 'src/app/services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart', // unique identifier that we can use in templates (HTML)
@@ -10,7 +11,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartComponent implements OnInit {
   totalAmount: number = 0;
   cartItems: ProductToAdd[] = this.cartService.getCartItems();
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
     /*this.cartService.getProduct().subscribe(res => {
@@ -27,6 +28,10 @@ export class CartComponent implements OnInit {
 
   emptyCart(): void {
     this.cartItems = this.cartService.emptyCart();
+  }
+
+  checkOut(): void {
+    this.router.navigate(['/checkout']);
   }
 
   removeItem(item: ProductToAdd): void {

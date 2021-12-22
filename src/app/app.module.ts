@@ -6,6 +6,8 @@ import { ProductItemDetailComponent } from './components/product-item-detail/pro
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -26,7 +28,9 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     CartComponent,
     CartItemComponent,
-    ProductItemDetailComponent
+    ProductItemDetailComponent,
+    CheckoutComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,

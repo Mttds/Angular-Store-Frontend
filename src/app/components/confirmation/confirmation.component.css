@@ -1,20 +1,25 @@
-.confirmation-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 8%;
-}
-  
-.confirmation-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-  
 .confirmation-header {
     color: #33e5bc
 }
-  
-.confirmation-item {
-    margin-bottom: 30px;
+
+.confirmation-price {
+    font-weight: bold;
+}
+
+.confirmation-fullname {
+    font-style: italic;
+}
+
+.confirmation-address {
+    font-style: italic;
+}
+
+#container {
+    display: table;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px;
+    width: 55%;
+    margin: auto;
 }

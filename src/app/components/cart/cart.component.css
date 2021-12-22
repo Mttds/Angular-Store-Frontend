@@ -3,6 +3,13 @@ img {
     border-radius: 10px;
 }
 
+.end-line {
+    height: 5px;
+    border-width: 5;
+    color: gray;
+    background-color: #0275d8;
+}
+
 .form-margin {
     margin-bottom: 12px;
 }

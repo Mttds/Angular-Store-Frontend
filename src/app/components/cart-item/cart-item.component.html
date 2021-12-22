@@ -1,7 +1,12 @@
-<div>
-  <span>Quantity {{ cartItem.quantity }}</span> of 
-  <span>{{ cartItem.name }}</span>:
-  <b>${{ (cartItem.price * cartItem.quantity) }}</b>
-  <p></p>
-  <button class="btn btn-primary" style="margin-right: 10px;" (click)="remove(cartItem)">Remove</button>
+<div class="cart-container">
+  <div>
+    <img class="img" src="{{ cartItem.url }}">
+  </div>
+  <div class="cart-item">
+    <span>Quantity {{ cartItem.quantity }}</span> of 
+    <span>{{ cartItem.name }}</span>:
+    <b>${{ (cartItem.price * cartItem.quantity) }}</b>
+    <p></p>
+    <button class="btn btn-primary" style="margin-right: 10px;" (click)="remove(cartItem)">Remove</button>
+  </div>
 </div>
