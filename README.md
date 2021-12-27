@@ -22,6 +22,15 @@ To have some data to display to the Angular front-end the file ./src/assets/data
 
 ![image info](./create-user-request.PNG)
 
+For example with the following JSON:
+
+{
+    "firstname": "testuser",
+    "lastname": "testuser",
+    "password": "testuser",
+    "username": "testuser"
+}
+
 11) Create the products in the database which will be visible in the front-end by issuing POST requests with the sample ./src/assets/data.json. Remember to set the Authentication Bearer to the acquired JWT token.
 
 Now it should be possible to start the Angular application (check 'Start the application' section) and see the inserted products in the browser at http://localhost:4200.
@@ -29,6 +38,18 @@ Now it should be possible to start the Angular application (check 'Start the app
 ![image info](./jwt-bearer-auth.PNG)
 
 ![image info](./create-product-request.PNG)
+
+Using the following JSON:
+
+{
+    "name": "Shirt",
+    "type": "Clothes",
+    "category": "Fashion",
+    "weight": 1,
+    "price": "29.99",
+    "description": "Wear it with style!",
+    "url": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
+}
 
 #### Project features
 
